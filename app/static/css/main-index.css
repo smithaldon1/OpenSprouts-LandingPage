@@ -1,1 +1,8 @@
 /* Add style as you like. */
+.hero {
+    background-image: url('../img/dan-stephens.jpg');
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

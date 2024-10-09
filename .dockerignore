@@ -1,0 +1,21 @@
+# Ignore
+prod.sqbpro
+.DS_Store
+config.py
+default.db
+LICENSE
+Dockerfile
+prod.db
+__pycache__
+anetSdk.log
+flaskapp.log
+.dockerignore
+.gitignore
+.venv
+docker-compose.yml
+.git
+.vscode
+env.sample
+
+# Don't ignore
+!requirements.txt

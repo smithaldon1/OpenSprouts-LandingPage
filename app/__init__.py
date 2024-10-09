@@ -33,10 +33,8 @@ def create_app():
     return app
 
 def register_blueprints(app):
-    from app.about import about_bp
     from app.main import main_bp
 
-    app.register_blueprint(about_bp, url_prefix='/about')
     app.register_blueprint(main_bp)
 
 
