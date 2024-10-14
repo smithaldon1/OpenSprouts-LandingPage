@@ -12,6 +12,11 @@ nav {
 footer {
     background-color: #118B44;
 }
+.email-link {
+    color:#212E1D;
+    font-style: italic;
+    border: none;
+}
 html {
     overflow-x: hidden;
     overflow-y: scroll;

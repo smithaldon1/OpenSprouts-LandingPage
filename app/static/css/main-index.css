@@ -24,12 +24,18 @@
 .introduction {
     padding: 6rem 0;
 }
+.intro-text {
+    color: #118B44;
+}
 .features {
-    padding: 10rem 0;
+    padding: 6rem 0;
     background-color: #118B44;
 }
+.cardImg {
+    max-inline-size: 12rem;
+}
 .testimonials {
-    padding: 2rem 0;
+    padding: 6rem 0;
 }
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23118B44' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
@@ -45,7 +51,7 @@
     right: -45rem;
 }
 .cta {
-    padding: 5rem;
+    padding: 6rem;
     background-color: #118B44;
     color: #000;
 }
@@ -55,7 +61,4 @@
 }
 #accordion {
     max-width: 64rem;
-}
-.accordion {
-
 }

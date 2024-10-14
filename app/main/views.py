@@ -4,22 +4,22 @@ from flask import render_template
 @main_bp.route('/')
 def show_index():
     card1 = {
-        'imgsrc': '...',
+        'imgsrc': "img/dashboard.png",
         'title': 'Intuitive Dashboard',
         'text': 'Manage your projects effortlessly with our user-friendly interface.'
     }
     card2 = {
-        'imgsrc': '...',
+        'imgsrc': 'img/clientportal.png',
         'title': 'Client Portal',
         'text': 'Allow your clients to view project progress, approve designs, and provide feedback.'
     }
     card3 = {
-        'imgsrc': '...',
+        'imgsrc': 'img/marketing.png',
         'title': 'Marketing Tools',
         'text': 'Promote your services effectively with customizable marketing templates.'
     }
     card4 = {
-        'imgsrc': '...',
+        'imgsrc': 'img/education.png',
         'title': 'Learning Center',
         'text': 'Access tutorials and expert advice to improve your landscaping techniques.'
     }
@@ -53,3 +53,7 @@ def show_index():
     }
     questions = [question1, question2, question3]
     return render_template('main/index.html', features=features, quotes=quotes, questions=questions, title="Welcome")
+
+@main_bp.route('/waitlist')
+def show_waitlist():
+    return render_template('main/waitlist.html', title="Waitlist")

@@ -1,0 +1,13 @@
+.bg {
+    background-image: url(../img/waitlistBg.jpeg);
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+.white-bg {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 70vh;
+}
