@@ -2,6 +2,7 @@ from . import main_bp
 from app import db
 from app.models import Waitlist
 from flask import render_template, request, redirect, url_for
+from sqlalchemy import cast, String
 
 @main_bp.route('/')
 def show_index():
@@ -27,12 +28,12 @@ def show_index():
     }
     features = [card1, card2, card3, card4]
     quote1 = {
-        'quote': '"OpenSprouts has streamlined my workflow and made client communication a breeze!"',
-        'author': 'Jane D., Landscape Designer'
+        'quote': '"All factors go into doing your best to give a quote to the customer, really like, as soon as possible. You know your closing rates are gonna increase most definitely. If you\'re able to give a quote on the spot."',
+        'author': 'Rob Fajardo, Trenton Falls, Idaho'
     }
     quote2 = {
         'quote': '"I can\'t wait to see how this platform helps my business grow!"',
-        'author': 'John S., Landscaper'
+        'author': 'John D., Landscaper'
     }
     quotes = [quote1, quote2]
     question1 = {
@@ -58,9 +59,8 @@ def show_index():
 
 @main_bp.route('/waitlist', methods=['POST'])
 def add_to_waitlist():
-    waitlist_item = Waitlist(
-        email = request.form.getlist('email')
-    )
+    email = request.form.getlist('email')
+    waitlist_item = Waitlist(email=email)
     db.session.add(waitlist_item)
     db.session.commit()
     return redirect(url_for("main.thank_you"))

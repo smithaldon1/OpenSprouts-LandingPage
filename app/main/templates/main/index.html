@@ -10,18 +10,18 @@
     <h3 class="display-4 fw-bold text-body-emphasis">Transform Your Landscaping Business with OpenSprouts!</h3>
     <div class="col-lg mx-auto">
       <p class="lead mb-4 text">Join the waitlist for early access to the innovative platform designed for landscapers.</p>
-      <div class="input-group d-grid d-sm-flex justify-content-sm-center">
-        <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
-          <input name="email" type="text" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="topBtn">
+      <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
+        <div class="input-group d-grid d-sm-flex justify-content-center">
+          <input name="email" type="email" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="topBtn">
           <button id="topBtn" type="button" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>
-<div class="container introduction">
-  <h3 class="intro-text mb-4">OpenSprouts is here to revolutionize the way landscapers connect with clients, manage projects, and grow their businesses.</h3>
-  <h3 class="intro-text">Whether you're a seasoned pro or just starting, our platform offers tools and resources tailored to your needs.</h3>
+<div class="container text-center introduction">
+  <h2 class="intro-text mb-4">OpenSprouts is here to revolutionize the way landscapers connect with clients, manage projects, and grow their businesses.</h2>
+  <h2 class="intro-text">Whether you're a seasoned pro or just starting, our platform offers tools and resources tailored to your needs.</h2>
 </div>
 <div class="container-fluid features">
   <div class="container">
@@ -51,10 +51,10 @@
     <div class="carousel-inner container-fluid">
     {% for quote in quotes %}
       <div class="carousel-item {% if loop.first %}active {% endif %} d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <div class="card mb-5" style="width: 64rem;">
+        <div class="card mb-5 carousel-card" style="width: 64rem;">
           <div class="card-body">
             <i><h3 class="card-title quote">{{ quote.quote }}</h5></i>
-            <i><h5 class="card-subtitle mb-2 text-muted author">- {{ quote.author }}</h6></i>
+            <i><h5 class="card-subtitle my-3 text-muted author">- {{ quote.author }}</h6></i>
           </div>
         </div>
       </div>
@@ -70,19 +70,19 @@
   </div>
 </div>
 <div class="container-fluid cta">
-  <div class="container mx-auto text-center card-bg rounded py-5 px-2">
+  <div class="container mx-auto text-center card-bg rounded py-5 px-5">
     <h1>Don’t Miss Out!</h1>
     <div class="container my-4">
-      <h4>Be one of the first to experience OpenSprouts and transform your landscaping business.</h4>
+      <h4 class="my-4">Be one of the first to experience OpenSprouts and transform your landscaping business.</h4>
       <h4>Sign up for our waitlist today!</h4>
     </div>
     <div class="container">
-      <div class="input-group d-grid d-sm-flex justify-content-sm-center">
-        <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
+      <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
+        <div class="input-group d-grid d-sm-flex justify-content-sm-center">
           <input name="email" type="text" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="bottomBtn">
           <button id="bottomBtn" type="submit" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>

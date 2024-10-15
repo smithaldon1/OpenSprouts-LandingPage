@@ -9,6 +9,7 @@
 }
 .text-bg {
     background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem 2.5rem;
 }
 .text {
     font-size: 24px;
@@ -51,9 +52,13 @@
 .carousel {
     padding: 5rem 0;
 }
+.carousel-card {
+    padding: 2.5rem;
+}
 .author {
     position: relative;
-    right: -45rem;
+    right: -40rem;
+    color: #118B44;
 }
 .cta {
     padding: 6rem;
@@ -63,6 +68,20 @@
 .card-bg {
     background-color: #fff;
     width: 64rem;
+}
+.accordion-button {
+    font-size: 1.25rem;
+}
+.accordion-button:not(.collapsed) {
+    color:#118B44;
+    background-color: #A2D6B2;
+}
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: #118B44;
+}
+.accordion-body {
+    font-size: 1.5rem;
 }
 #accordion {
     max-width: 64rem;
