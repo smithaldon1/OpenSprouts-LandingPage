@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/thank-you.css') }}">
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid bg">
+    <div class="container white-bg">
+        <div class="container text-center">
+            <h1>Thank you for joining our waitlist!</h1>
+            <p>We’re thrilled to have you on board! Your interest means a lot to us, and we can’t wait to share exciting updates with you!</p>
+        </div>
+        <div class="container text-center">
+            <h2>What's Next?</h2>
+        </div>
+        <div class="container text-center">
+            <p><b>Stay Tuned</b>: Keep an eye on your inbox for exclusive sneak peeks and announcements.</p>
+            <p><b>Spread the Word</b>: Share the excitement with your friends! The more, the merrier.</p>
+        </div>
+        <div class="container text-center">
+            <p>If you have any questions or want to connect with us, feel free to reach out.</p>
+        </div>
+        <div class="container text-center">
+            <p>Thanks again for being part of our community!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/waitlist.js') }}"></script>
+{% endblock %}

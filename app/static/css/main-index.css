@@ -12,6 +12,7 @@
 }
 .text {
     font-size: 24px;
+    padding: 0 10rem;
 }
 .btn {
     background-color: #118B44;
@@ -20,6 +21,10 @@
 .btn:hover {
     background-color: #212E1D;
     border-color: #118B44;
+}
+.waitlist-input {
+    max-width: 15rem;
+    width: 100%;
 }
 .introduction {
     padding: 6rem 0;

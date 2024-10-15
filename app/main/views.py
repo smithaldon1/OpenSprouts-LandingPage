@@ -1,5 +1,7 @@
 from . import main_bp
-from flask import render_template
+from app import db
+from app.models import Waitlist
+from flask import render_template, request, redirect, url_for
 
 @main_bp.route('/')
 def show_index():
@@ -54,6 +56,15 @@ def show_index():
     questions = [question1, question2, question3]
     return render_template('main/index.html', features=features, quotes=quotes, questions=questions, title="Welcome")
 
-@main_bp.route('/waitlist')
-def show_waitlist():
-    return render_template('main/waitlist.html', title="Waitlist")
+@main_bp.route('/waitlist', methods=['POST'])
+def add_to_waitlist():
+    waitlist_item = Waitlist(
+        email = request.form.getlist('email')
+    )
+    db.session.add(waitlist_item)
+    db.session.commit()
+    return redirect(url_for("main.thank_you"))
+
+@main_bp.route('/thank_you')
+def thank_you():
+    return render_template('main/thank_you.html', title="Thank You")

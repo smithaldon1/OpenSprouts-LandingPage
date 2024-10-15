@@ -8,10 +8,13 @@
 <div class="px-4 py-5 text-center hero">
   <div class="text-bg py-3 px-2 rounded position-absolute top-50 start-50 translate-middle">
     <h3 class="display-4 fw-bold text-body-emphasis">Transform Your Landscaping Business with OpenSprouts!</h3>
-    <div class="col-lg-6 mx-auto">
+    <div class="col-lg mx-auto">
       <p class="lead mb-4 text">Join the waitlist for early access to the innovative platform designed for landscapers.</p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="/waitlist">Join the Waitlist Now</a>
+      <div class="input-group d-grid d-sm-flex justify-content-sm-center">
+        <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
+          <input name="email" type="text" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="topBtn">
+          <button id="topBtn" type="button" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
+        </form>
       </div>
     </div>
   </div>
@@ -73,8 +76,13 @@
       <h4>Be one of the first to experience OpenSprouts and transform your landscaping business.</h4>
       <h4>Sign up for our waitlist today!</h4>
     </div>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <a type="button" class="btn btn-primary btn-lg px-4 gap-3" href="/waitlist">Join the Waitlist Now</a>
+    <div class="container">
+      <div class="input-group d-grid d-sm-flex justify-content-sm-center">
+        <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
+          <input name="email" type="text" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="bottomBtn">
+          <button id="bottomBtn" type="submit" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
