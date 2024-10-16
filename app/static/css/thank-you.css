@@ -1,3 +1,8 @@
+@media screen and (max-width: 575.98px) {
+    .white-bg {
+        height: 90vh;
+    }
+}
 .bg {
     background-image: url(../img/waitlistBg.jpeg);
     height: 90vh;
@@ -22,7 +27,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 1rem 0;
 }
 .larger-text {
     font-size: 1.25rem;

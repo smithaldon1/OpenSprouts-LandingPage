@@ -2,18 +2,22 @@
 .hero {
     background-image: url('../img/dan-stephens.jpg');
     height: 80vh;
-    background-position: center -100px;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .text-bg {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 3rem;
+    max-width: 54rem;
 }
 .text {
     font-size: 24px;
-    padding: 0 10rem;
+    padding: 0 5rem;
+    margin: 2rem 0;
 }
 .btn {
     background-color: #118B44;
@@ -37,6 +41,11 @@
     padding: 6rem 0;
     background-color: #118B44;
 }
+.card-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .cardImg {
     max-inline-size: 12rem;
 }
@@ -57,7 +66,6 @@
 }
 .author {
     position: relative;
-    right: -40rem;
     color: #118B44;
 }
 .cta {
