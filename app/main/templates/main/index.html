@@ -6,13 +6,13 @@
 
 {% block main %}
 <div class="px-4 py-5 text-center hero">
-  <div class="text-bg rounded position-absolute top-50 start-50 translate-middle">
+  <div class="text-bg rounded">
     <h3 class="display-4 fw-bold text-body-emphasis">Transform Your Landscaping Business with OpenSprouts!</h3>
     <div class="col-lg mx-auto">
       <p class="lead mb-4 text">Join the waitlist for early access to the innovative platform designed for landscapers.</p>
       <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
         <div class="input-group d-grid d-sm-flex justify-content-center">
-          <input name="email" type="email" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="topBtn">
+          <input name="email" type="email" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="topBtn" required>
           <button id="topBtn" type="submit" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
         </div>
       </form>
@@ -27,12 +27,11 @@
   <div class="container">
     <h2 class="text-center text-white">Features Designed for Landscapers</h2>
   </div>
-  <div class="container">
-    <div class="row py-4">
+    <div class="container row py-4 mx-auto">
     {% for feature in features %}
-      <div class="col-sm-3 mx-auto">
-        <div class="card mx-3 my-3" style="width: 18rem; height: 21rem;">
-          <img src="{{ url_for('static', filename=feature.imgsrc) }}" class="card-img-top cardImg mx-auto p-3" alt="{{ feature.title }}">
+      <div class="col-xl-3 align-self-center card-col">
+        <div class="card mx-3 my-3" style="width: 16rem; height: 21rem;">
+          <img src="{{ url_for('static', filename=feature.imgsrc) }}" class="card-img-top cardImg mx-auto p-3 align-items-center" alt="{{ feature.title }}">
           <div class="card-body text-center d-flex flex-column">
             <h5 class="card-title mt-auto">{{ feature.title }}</h5>
             <p class="card-text {% if loop.first %}mb-4 {% endif %}">{{ feature.text }}</p>
@@ -41,7 +40,6 @@
       </div>
     {% endfor %}
     </div>
-  </div>
 </div>
 <div class="container-fluid testimonials">
   <div class="container text-center mb-3">
@@ -54,7 +52,7 @@
         <div class="card mb-5 carousel-card" style="width: 64rem;">
           <div class="card-body">
             <i><h3 class="card-title quote">{{ quote.quote }}</h5></i>
-            <i><h5 class="card-subtitle my-3 text-muted author">- {{ quote.author }}</h6></i>
+            <i><h5 class="card-subtitle my-3 text-end text-muted author">&mdash; {{ quote.author }}</h6></i>
           </div>
         </div>
       </div>
@@ -79,7 +77,7 @@
     <div class="container">
       <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
         <div class="input-group d-grid d-sm-flex justify-content-sm-center">
-          <input name="email" type="email" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="bottomBtn">
+          <input name="email" type="email" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="bottomBtn" required>
           <button id="bottomBtn" type="submit" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
         </div>
       </form>
@@ -87,7 +85,7 @@
   </div>
 </div>
 <div class="container-fluid questions mx-auto">
-  <div class="container text-center pt-4">
+  <div class="container text-center pt-4 mb-5 mt-3">
     <h3>Have Questions?</h3>
   </div>
   <div class="accordion mx-auto" id="accordion">
