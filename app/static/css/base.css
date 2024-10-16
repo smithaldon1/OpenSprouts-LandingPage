@@ -1,4 +1,23 @@
-/* Add style as you like. */
+body {
+    font-family: 'Roboto';
+    color: #212E1D;
+}
 nav {
-    background-color: transparent;
+    background-color: rgba(255,255,255,0);
+}
+.logos {
+    max-height: 1.25rem;
+    padding: 0 0.5rem;
+}
+footer {
+    background-color: #118B44;
+}
+.email-link {
+    color:#212E1D;
+    font-style: italic;
+    border: none;
+}
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
 }

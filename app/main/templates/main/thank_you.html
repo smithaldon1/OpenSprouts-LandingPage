@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/thank-you.css') }}">
+{% endblock %}
+
+{% block plugins %}
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=1673160769814438"></script>
+{% endblock %}
+
+{% block main %}
+<div class="container-fluid bg">
+    <div class="container white-bg rounded">
+        <div class="container text-center mb-5">
+            <h1>Thank you for joining our waitlist!</h1>
+            <p class="larger-text">We’re thrilled to have you on board! Your interest means a lot to us, and we can’t wait to share exciting updates with you!</p>
+        </div>
+        <div class="container text-center">
+            <h2>What's Next?</h2>
+        </div>
+        <div class="container d-grid d-sm-flex justify-content-sm-center">
+            <ul class="next-list">
+                <li><p class="larger-text"><b>Stay Tuned</b>: Keep an eye on your inbox for exclusive sneak peeks and announcements.</p></li>
+                <li><p class="larger-text"><b>Spread the Word</b>: Share the excitement with your friends! The more, the merrier.</p></li>
+            </ul>
+        </div>
+        <!-- Share Buttons -->
+        <div class="container text-center share-btns row">
+            <div class="col-1">
+                <div class="fb-share-button" data-href="https://opensprouts.com" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fopensprouts.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </div>
+            <div class="col-1">
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="I just joined the waitlist for OpenSprouts! Check it out!" data-url="https://opensprouts.com" data-related="opensprouts" data-lang="en" data-show-count="false">Tweet</a>
+            </div>
+            <div class="col-1">
+                <a href="https://www.pinterest.com/opensprouts/_created/" data-pin-do="buttonFollow">OpenSprouts</a>
+            </div>
+            <div class="col-1">
+                <div class="g-ytsubscribe" data-channelid="UCW3EVXSGKipTQ5AImVfQbqg" data-layout="default" data-count="hidden"></div>
+            </div>
+        </div>
+        <!-- End Share Buttons -->
+        <div class="container text-center">
+            <p class="larger-text">If you have any questions or want to connect with us, feel free to reach out.</p>
+        </div>
+        <div class="container text-center">
+            <p class="larger-text">Thanks again for being part of our community!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/waitlist.js') }}"></script>
+<script src="https://apis.google.com/js/platform.js"></script>
+<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endblock %}
