@@ -6,14 +6,14 @@
 
 {% block main %}
 <div class="px-4 py-5 text-center hero">
-  <div class="text-bg py-3 px-2 rounded position-absolute top-50 start-50 translate-middle">
+  <div class="text-bg rounded position-absolute top-50 start-50 translate-middle">
     <h3 class="display-4 fw-bold text-body-emphasis">Transform Your Landscaping Business with OpenSprouts!</h3>
     <div class="col-lg mx-auto">
       <p class="lead mb-4 text">Join the waitlist for early access to the innovative platform designed for landscapers.</p>
       <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
         <div class="input-group d-grid d-sm-flex justify-content-center">
           <input name="email" type="email" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="topBtn">
-          <button id="topBtn" type="button" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
+          <button id="topBtn" type="submit" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
         </div>
       </form>
     </div>
@@ -79,7 +79,7 @@
     <div class="container">
       <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
         <div class="input-group d-grid d-sm-flex justify-content-sm-center">
-          <input name="email" type="text" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="bottomBtn">
+          <input name="email" type="email" class="form-control waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="bottomBtn">
           <button id="bottomBtn" type="submit" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
         </div>
       </form>
