@@ -28,8 +28,7 @@
     border-color: #118B44;
 }
 .waitlist-input {
-    max-width: 15rem;
-    width: 100%;
+    border-color: #dddddd;
 }
 .introduction {
     padding: 6rem 0;
@@ -69,13 +68,11 @@
     color: #118B44;
 }
 .cta {
-    padding: 6rem;
     background-color: #118B44;
     color: #000;
 }
 .card-bg {
     background-color: #fff;
-    width: 64rem;
 }
 .accordion-button {
     font-size: 1.25rem;
