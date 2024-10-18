@@ -10,11 +10,17 @@ jobs:
           name: Install dependencies
           command: pip install -r requirements.txt
       - run:
+          name: Run tests
+          command: pytest
+      - run:
           name: Build Docker image
           command: docker-compose build
       - run:
           name: Run Docker Compose
           command: docker-compose up -d
+      - run:
+          name: Run integration tests
+          command: pytest integration_tests/
 
 workflows:
   version: 2
