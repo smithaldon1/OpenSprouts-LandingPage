@@ -5,17 +5,17 @@
 {% endblock %}
 
 {% block main %}
-<div class="px-4 py-5 text-center hero">
-  <div class="text-bg rounded">
+<div class="px-md-4 py-md-5 text-center hero">
+  <div class="text-bg rounded p-3 p-sm-5">
     <h3 class="display-4 fw-bold text-body-emphasis">Transform Your Landscaping Business with OpenSprouts!</h3>
-    <div class="col-lg mx-auto">
-      <p class="lead mb-4 text">Join the waitlist for early access to the innovative platform designed for landscapers.</p>
+    <div class="container mx-auto">
+      <p class="lead mb-4 mx-md-4 text">Join the waitlist for early access to the innovative platform designed for landscapers.</p>
       <form action="{{ url_for('main.add_to_waitlist') }}" method="post">
         <div class="row g-3 align-items-center justify-content-center">
           <div class="col-auto">
             <input name="email" type="email" class="form-control-lg waitlist-input" placeholder="Email Address" aria-label="Email Address" aria-describedby="topBtn" required>
           </div>
-          <div class="col-auto">
+          <div class="col-auto mb-3 mb-sm-0">
             <button id="topBtn" type="submit" class="btn btn-primary btn-lg px-4 gap-3">Join the Waitlist Now</button>
           </div>
         </div>
