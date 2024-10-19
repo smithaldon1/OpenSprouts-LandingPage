@@ -18,9 +18,11 @@ services:
     restart: always
     ports:
       - "5432:5432/tcp"
+    env_file:
+      - .env
     environment:
-      POSTGRES_DB: "db"
-      POSTGRES_PASSWORD: "password"
+      POSTGRES_DB: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_HOST_AUTH_METHOD: "trust"
       SERVICE_MANAGER: "fsm-postgres"
     networks:
