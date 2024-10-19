@@ -2,7 +2,7 @@ from . import main_bp
 from app import db
 from app.models import Waitlist
 from flask import render_template, request, redirect, url_for
-from sqlalchemy import cast, String
+
 
 @main_bp.route('/')
 def show_index():
