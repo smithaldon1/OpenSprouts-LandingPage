@@ -1,7 +1,9 @@
 from . import main_bp
 from app import db
 from app.models import Waitlist
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, current_app, jsonify, flash
+import requests
+import json
 
 
 @main_bp.route('/')
@@ -59,11 +61,27 @@ def show_index():
 
 @main_bp.route('/waitlist', methods=['POST'])
 def add_to_waitlist():
-    email = request.form.getlist('email')
-    waitlist_item = Waitlist(email=email)
-    db.session.add(waitlist_item)
-    db.session.commit()
+    captcha_response = request.get_json
+    if request.method == "POST":
+        email = request.form.getlist('email')
+
+        if is_human(captcha_response):
+            waitlist_item = Waitlist(email=email)
+            db.session.add(waitlist_item)
+            db.session.commit()
+            status = "Email Saved!"
+        else:
+            status = "Sorry ! Bots are not allowed."
+        
+        flash(status)
     return redirect(url_for("main.thank_you"))
+
+def is_human(captcha_response):
+    secret = current_app.config['CAPTCHA_SECRET_KEY']
+    payload = {'response':captcha_response, 'secret':secret}
+    response = requests.post("https://www.google.com/recaptcha/api/siteverify", payload)
+    response_text = json.loads(response.text)
+    return response_text['success']
 
 @main_bp.route('/thank_you')
 def thank_you():

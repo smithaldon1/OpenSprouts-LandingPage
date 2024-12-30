@@ -21,10 +21,12 @@ services:
     env_file:
       - .env
     environment:
-      POSTGRES_DB: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_HOST_AUTH_METHOD: "trust"
+      POSTGRES_HOST_AUTH_METHOD: "scram-sha-256"
       SERVICE_MANAGER: "fsm-postgres"
+      PG_DATA: /var/lib/postgresql/data
     networks:
       - appnet
     volumes:

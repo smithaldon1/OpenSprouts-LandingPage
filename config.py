@@ -18,6 +18,7 @@ class Config:
     
     # Settings applicable to all environments
     SECRET_KEY = os.getenv('SECRET_KEY', default='Its a trap')
+    CAPTCHA_SECRET_KEY = os.getenv('CAPTCHA_SECRET_KEY')
     
     SQLALCHEMY_TRACK_MODIFICATIONS = False   
     
