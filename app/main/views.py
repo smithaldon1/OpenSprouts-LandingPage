@@ -71,7 +71,7 @@ def add_to_waitlist():
             db.session.commit()
             status = "Email Saved!"
         else:
-            status = "Sorry ! Bots are not allowed."
+            status = "Sorry! Bots are not allowed."
         
         flash(status)
     return redirect(url_for("main.thank_you"))
